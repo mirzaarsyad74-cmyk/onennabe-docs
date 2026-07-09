@@ -1,0 +1,40 @@
+site_name: Steam Unlock ONENNABE
+site_description: Official guide and documentation for Steam Unlock ONENNABE
+site_url: https://barryhamsy.github.io/onennabe-docs/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+    accent: light blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - CD Key Activation: cd-key-activation.md
+  - Using ONENNABE:
+    - Bypass & Online Patch: bypass-and-online-patch.md
+    - Denuvo Games: denuvo-games.md
+  - Help:
+    - Troubleshooting: troubleshooting.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
