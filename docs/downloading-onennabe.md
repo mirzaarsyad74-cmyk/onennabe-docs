@@ -19,7 +19,9 @@ Before downloading, you must turn off **Real-Time Protection** in Windows Defend
 
 ## Step 2 — Download via Google Chrome
 <img width="651" height="468" alt="image" src="https://github.com/user-attachments/assets/d2fa1705-9b18-4a10-a1d0-58a9660f8056" />
+
 or this
+
 <img width="348" height="153" alt="image" src="https://github.com/user-attachments/assets/8402457f-0a91-4525-9454-1f2c9981d078" />
 
 Watch the video below for a full walkthrough of the download process:
@@ -35,10 +37,10 @@ Watch the video below for a full walkthrough of the download process:
 2. Go to the ONENNABE download link provided by your seller
 3. Click the download button
 4. If Chrome shows a warning saying **"This file may be harmful"**:
-    a. 1st Method
+a. 1st Method
     - Click the **arrow (⌄)** next to the discard button
     - Click **Keep** or **Keep anyway**
-    b. 2nd Method
+b. 2nd Method
     - On your Keyboard, press CTRL + J
     - It will open download page
     - Find the file
