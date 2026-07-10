@@ -8,8 +8,9 @@ Some games in the ONENNABE catalogue support online play or have a bypass patch 
 
 | Tag | What It Means |
 |---|---|
-| `Bypass Available` | A bypass patch exists for this game |
-| `Online Supported` | An online patch exists for this game |
+| `Bypass Available` | A bypass game patch, which allows game to be played |
+| `Online Supported` | An online patch for supported game, which support online play with friends, sometimes public server |
+| `Hypervisor Bypass` | This game uses Hypervisor Patch, STRICTLY for really advance user, getting help from admin in discord if unsure, but please try it yourself first, tutorial is available.|
 | `Denuvo` | Requires borrowing the seller's account — see [Denuvo Games](denuvo-games.md) |
 
 ---
