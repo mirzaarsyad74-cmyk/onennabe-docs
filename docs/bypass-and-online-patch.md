@@ -8,9 +8,9 @@ Some games in the ONENNABE catalogue support online play or have a bypass patch 
 
 | Tag | What It Means |
 |---|---|
-| <img width="128" height="26" alt="image" src="https://github.com/user-attachments/assets/24342ce3-e345-4c33-ae09-afd82d2c88d1" />
+|<img width="128" height="26" alt="image" src="https://github.com/user-attachments/assets/24342ce3-e345-4c33-ae09-afd82d2c88d1" />
 `Bypass Available` | A bypass game patch, which allows game to be played |
-| <img width="133" height="28" alt="image" src="https://github.com/user-attachments/assets/171f3585-b423-4a02-9e6f-cb2ad6a2b8fb" />
+|<img width="133" height="28" alt="image" src="https://github.com/user-attachments/assets/171f3585-b423-4a02-9e6f-cb2ad6a2b8fb" />
 `Online Supported` | An online patch for supported game, which support online play with friends, sometimes public server |
 |<img width="138" height="22" alt="image" src="https://github.com/user-attachments/assets/82e0bb22-83ea-4e61-83dc-d86f925ad915" />
  `Hypervisor Bypass` | This game uses Hypervisor Patch, STRICTLY for really advance user, getting help from admin in discord if unsure, but please try it yourself first, tutorial is available.|
