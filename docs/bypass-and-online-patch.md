@@ -53,6 +53,7 @@ When launching a game that has Online Patch applied, a browser pop-up from onlin
 
 !!! note 
 If there is Epic Game page or Microsoft login page required and pop up upon launching the game after Online Patch, please login to enable online play. Skipping the login will disable online play.
+
 ---
 
 ## Summary
