@@ -5,11 +5,11 @@ site_url: https://barryhamsy.github.io/onennabe-docs/
 theme:
   favicon: steamunlock_wannabe.ico
   logo: steamunlock_wannabe.ico
-  name: dracula
+  name: material
   palette:
     scheme: slate
-    primary: blue
-    accent: dark purple
+    primary: blue grey
+    accent: light blue
   font:
     text: Roboto
     code: Roboto Mono
@@ -21,6 +21,10 @@ theme:
     - search.suggest
     - content.code.copy
 
+# Added this line to allow for the exact color overrides
+extra_css:
+  - stylesheets/steam-theme.css
+
 nav:
   - Home: index.md
   - Getting Started:
@@ -30,8 +34,8 @@ nav:
     - Unlocking Games & Library: unlocking-games-and-library.md
     - Bypass & Online Patch: bypass-and-online-patch.md
     - Denuvo Games: denuvo-games.md
-    - Hypervisor Games: hypervisor.md
     - Cloud Redirect: cloudredirect.md
+    - Hypervisor Games: hypervisor.md
   - Help:
     - Troubleshooting: troubleshooting.md
 
