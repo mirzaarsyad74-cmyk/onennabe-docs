@@ -18,6 +18,7 @@ Some games in the ONENNABE catalogue support online play or have a bypass patch 
 ## Step-by-Step: How to Apply Bypass / Online Patch
 
 ### Step 1 — Smart Apply (Tools)
+<img width="1498" height="1179" alt="Steam_Unlock_ONENNABE_9Kdby9E2cH" src="https://github.com/user-attachments/assets/4f811655-ac25-44b7-90cd-3d8a2650ab66" />
 
 Before downloading the game in Steam, run Smart Apply first:
 
