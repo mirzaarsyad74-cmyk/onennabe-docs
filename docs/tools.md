@@ -5,6 +5,7 @@ The Tools section in ONENNABE provides utilities to manage your games, fix Steam
 ---
 
 ## 🔄 Game Auto Update
+<img width="1156" height="573" alt="image" src="https://github.com/user-attachments/assets/67b806d7-91c8-476e-b531-f2c2ab42e4dd" />
 
 Manages the auto-update setting per game in Steam.
 
@@ -12,6 +13,7 @@ Manages the auto-update setting per game in Steam.
 - **Lock** — pins the game to its current version and prevents Steam from updating it
 
 ### Smart Apply
+<img width="607" height="187" alt="image" src="https://github.com/user-attachments/assets/057a3974-2afa-488b-a6fc-d5c479d2df0f" />
 
 Click **Smart Apply** inside Game Auto Update to automatically apply the recommended setting to all your games at once:
 
@@ -28,6 +30,7 @@ Click **Smart Apply** inside Game Auto Update to automatically apply the recomme
 ---
 
 ## 🧹 Clear Steam Download Cache
+<img width="647" height="173" alt="image" src="https://github.com/user-attachments/assets/58df57a9-a5a0-414c-a6d6-221f20409dac" />
 
 Clears Steam's download cache and temporary files, then restarts Steam automatically.
 
@@ -35,30 +38,32 @@ Clears Steam's download cache and temporary files, then restarts Steam automatic
 - Downloads are corrupted or failing
 - Steam is stuck in an update loop
 - Patching is unusually slow
-
-!!! note
-    Steam will restart after the cache is cleared. You will need to log back in.
-
+- Re deploy Steam Unlock unlocker files
+  
 ---
 
-## 💉 Inject HV Launch Options
+## 🩹 Fix Unlock Game Issue
 
-Scans your Steam library folders for `HV-PlugNPlay.bat` and automatically injects it into the game's Steam Launch Options.
+Clears Steam's `config` folder to fix games that won't unlock or throw config errors. This is an attempt to fix unlocking game issue
 
-**Use this when:**
-- You want to launch a Hypervisor game directly from Steam
-- The HV launch option is missing from the game in Steam
+**What is kept:**
+- `avatarcache`
+- `depotcache`
+- `stplug-in` (your unlocked games)
 
-!!! warning "Windows 11 Only"
-    `HV-PlugNPlay.bat` only works on Windows 11. Steam will close and restart to apply the changes.
+Steam closes and restarts automatically after the fix.
 
-An **Injector Terminal** will appear showing the injection progress and results.
+!!! warning "You will need to sign in to Steam again"
+    Your unlocked games are safe, but your Steam login session will be cleared.
 
 ---
 
 ## 🔄 Reinstall Steam
+<img width="641" height="236" alt="image" src="https://github.com/user-attachments/assets/ac7c25af-8016-420e-80b2-3f75ee4ff2c1" />
 
 Downloads a fresh Steam installer and performs a **clean reinstall** of Steam.
+This mostly fix issue game is not being unlock despite already clicking unlock game
+You will have to restart Steam Unlock too after reinstalling fresh Steam.
 
 **What is kept:**
 - Your unlocked games (`stplug-in`)
@@ -76,19 +81,19 @@ The unlock hook is re-deployed automatically after the reinstall.
 
 ---
 
-## 🩹 Fix Unlock Game Issue
+## 💉 Inject HV Launch Options
 
-Clears Steam's `config` folder to fix games that won't unlock or throw config errors.
+Scans your Steam library folders for `HV-PlugNPlay.bat` and automatically injects it into the game's Steam Launch Options.
+<img width="646" height="193" alt="image" src="https://github.com/user-attachments/assets/7db95fd8-e2bc-43f3-84d7-2bff415054a5" />
 
-**What is kept:**
-- `avatarcache`
-- `depotcache`
-- `stplug-in` (your unlocked games)
+**Use this when:**
+- You want to launch a Hypervisor game directly from Steam
+- The HV launch option is missing from the game in Steam
 
-Steam closes and restarts automatically after the fix.
+!!! warning "Windows 11 Only"
+    `HV-PlugNPlay.bat` only works on Windows 11. Steam will close and restart to apply the changes.
 
-!!! warning "You will need to sign in to Steam again"
-    Your unlocked games are safe, but your Steam login session will be cleared.
+An **Injector Terminal** will appear showing the injection progress and results.
 
 ---
 
@@ -124,6 +129,7 @@ A third-party tool (not made by ONENNABE) that provides extra features for manag
 
 !!! note "Third-party tool"
     CloudRedirect is not affiliated with ONENNABE. Download and launch it from within the Tools section.
+Full tutorial at 
 
 ---
 
