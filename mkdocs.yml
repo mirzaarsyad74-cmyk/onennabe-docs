@@ -39,7 +39,7 @@ nav:
     - Denuvo Games: denuvo-games.md
     - Cloud Redirect: cloudredirect.md
     - Hypervisor Games: hypervisor.md
-  - Help:
+  - Help, my game is not unlocking:
     - Troubleshooting: troubleshooting.md
 
 markdown_extensions:
