@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install MkDocs and Material theme
+      - name: Install dependencies
         run: |
-          pip install mkdocs-material
+          pip install mkdocs mkdocs-dracula-theme
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
