@@ -10,7 +10,7 @@ ONENNABE modifies Steam configuration files to unlock games. Windows and antivir
 
 ### 1A — Turn Off Smart App Control (Windows 11 only)
 
-<a href="ms-settings:windowsdefender" class="steam-btn-blue">Open Windows Defender Settings</a>
+<a href="windowsdefender://SmartApp/" class="steam-btn-blue">⚙️ Open Smart App Control</a>
 
 _Note: Click "Allow" or "Open Settings" if your browser prompts you._
 
@@ -24,7 +24,7 @@ _Note: Click "Allow" or "Open Settings" if your browser prompts you._
 
 ### 1B — Add Windows Defender Exclusions
 
-[Launch Windows Security App](windowssecurity:){.steam-btn-green}  
+[🛡️ Open Exclusions Settings](windowsdefender://Exclusions/){.steam-btn-green}  
 _Note: Click "Allow" or "Open Windows Security" if your browser prompts you._
 
 1. Open **Settings** → **Privacy & Security** → **Windows Security**
