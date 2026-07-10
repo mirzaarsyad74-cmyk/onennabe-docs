@@ -15,16 +15,20 @@ The simplest fix and often the most effective.
 
 ---
 
-## Fix 2 — Restart Steam
+## Fix 2 — Fix Unlock Game Issue
+<img width="461" height="173" alt="image" src="https://github.com/user-attachments/assets/1c6d3fe5-fab8-4326-be6c-5fa55d326dd8" />
 
-1. Close Steam completely (right-click the Steam tray icon → **Exit**)
-2. Wait a few seconds
-3. Reopen Steam and log in
-4. Reopen ONENNABE and try again
+1. Open **Steam Unlock ONENNABE**
+2. Go to the **Tools** section
+3. Click **Fix Now**
+4. Wait for it to complete
+5. Steam will restart — log back in
+6. Try again
 
 ---
 
 ## Fix 3 — Clear Steam Download Cache
+<img width="477" height="126" alt="image" src="https://github.com/user-attachments/assets/0618dd49-4eef-4a2d-b3fc-98e57c94c7ca" />
 
 1. Open **Steam Unlock ONENNABE**
 2. Go to the **Tools** section
@@ -36,8 +40,9 @@ The simplest fix and often the most effective.
 ---
 
 ## Fix 4 — Reinstall Steam (via ONENNABE Tools)
+<img width="462" height="169" alt="image" src="https://github.com/user-attachments/assets/675094a7-9023-42d3-9892-ba2f06f7b9b2" />
 
-If all the above did not help, use the Reinstall Steam option built into ONENNABE. This does a clean Steam reinstall without affecting your downloaded games.
+If all the above did not help, use the Reinstall Steam option built into ONENNABE. This does a clean Steam reinstall without affecting your downloaded games. You have to restart Steam Unlock Onennabe once you have complete reinstalling Steam.
 
 1. Open **Steam Unlock ONENNABE**
 2. Go to the **Tools** section
