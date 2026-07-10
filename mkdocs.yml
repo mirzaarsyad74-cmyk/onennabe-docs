@@ -8,8 +8,8 @@ theme:
   name: material
   palette:
     scheme: slate
-    primary: blue grey
-    accent: light blue
+    primary: custom
+    accent: custom
   font:
     text: Roboto
     code: Roboto Mono
@@ -21,7 +21,6 @@ theme:
     - search.suggest
     - content.code.copy
 
-# Added this line to allow for the exact color overrides
 extra_css:
   - stylesheets/steam-theme.css
 
