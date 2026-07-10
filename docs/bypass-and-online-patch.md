@@ -8,10 +8,13 @@ Some games in the ONENNABE catalogue support online play or have a bypass patch 
 
 | Tag | What It Means |
 |---|---|
-|<img width="128" height="26" alt="image" src="https://github.com/user-attachments/assets/24342ce3-e345-4c33-ae09-afd82d2c88d1" /> | A bypass game patch, which allows game to be played |
-|<img width="133" height="28" alt="image" src="https://github.com/user-attachments/assets/171f3585-b423-4a02-9e6f-cb2ad6a2b8fb" /> | An online patch for supported game, which support online play with friends, sometimes public server |
-|<img width="138" height="22" alt="image" src="https://github.com/user-attachments/assets/82e0bb22-83ea-4e61-83dc-d86f925ad915" />| This game uses Hypervisor Patch, STRICTLY for really advance user, getting help from admin in discord if unsure, but please try it yourself first, tutorial is available.|
-|<img width="137" height="30" alt="image" src="https://github.com/user-attachments/assets/f72469cc-ecf5-4cdc-92f8-887d402b0ff7" /> | Requires borrowing the seller's account — see [Denuvo Games](denuvo-games.md) |
+|<img width="1080" height="227" alt="image" src="https://github.com/user-attachments/assets/a7e0bf91-d37f-4d1f-a7ae-e77e5d5fb2a2" />
+ | A bypass game patch, which allows game to be played |
+|<img width="1080" height="210" alt="image" src="https://github.com/user-attachments/assets/9c113735-c520-4cea-ad9e-0f70a80fdb22" />
+ | An online patch for supported game, which support online play with friends, sometimes public server |
+|<img width="1080" height="237" alt="image" src="https://github.com/user-attachments/assets/0ef04cf7-83e1-44b2-8854-77d2af5e9020" />
+ | This game uses Hypervisor Patch, STRICTLY for really advance user, getting help from admin in discord if unsure, but please try it yourself first, tutorial is available.|
+|<img width="1080" height="200" alt="image" src="https://github.com/user-attachments/assets/0fcc4264-dcf9-411d-a621-e23cb3ba4064" /> | Requires borrowing the seller's account — see [Denuvo Games](denuvo-games.md) |
 
 ---
 
