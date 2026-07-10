@@ -3,8 +3,6 @@
 This page covers how to unlock a game in ONENNABE and how to navigate the Library tab, including the right-click context menu.
 
 ---
-<img width="1042" height="671" alt="image" src="https://github.com/user-attachments/assets/19361498-03bb-4d1d-8f04-828f08621e38" />
-
 ## Unlocking a Game
 
 ### Step 1 — Find the Game in the Store Tab
