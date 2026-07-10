@@ -8,6 +8,7 @@ The Library tab lets you remove one or multiple games at once using the **checkb
 ---
 
 ## How to Remove Games
+<img width="610" height="603" alt="chrome_prOTM2Qbw5" src="https://github.com/user-attachments/assets/f6627a05-9e66-407d-bfbb-79e34f43bfa2" />
 
 ### Step 1 — Select Games Using the Checkbox
 
