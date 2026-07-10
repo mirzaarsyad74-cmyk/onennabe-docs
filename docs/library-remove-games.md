@@ -3,7 +3,7 @@
 The Library tab lets you remove one or multiple games at once using the **checkbox selector** and the **🗑️ trash button**.
 
 !!! info "What does removing do?"
-    Removing a game deletes its `.lua` unlock file from your library. This removes the game from Steam's library view. It does **not** uninstall the game files from your PC — your downloaded game data in `steamapps` is kept.
+    Removing a game deletes its unlock file from your library. This removes the game from Steam's library view. It does **not** uninstall the game files from your PC — your downloaded game data in `steamapps` is kept.
 
 ---
 
@@ -50,7 +50,7 @@ A success notification will appear confirming how many games were removed.
 
 ## Important Notes
 
-- **Removing does not uninstall.** Your game files remain on disk in `steamapps`. Only the unlock (`.lua` file) is deleted.
+- **Removing does not uninstall.** Your game files remain on disk in `steamapps`. Only the unlock file is deleted.
 - **To re-add a removed game**, go back to the Store tab, find the game, and unlock it again.
 - **The trash button only appears when at least one game is selected.** If you do not see it, click a checkbox first.
 - **To deselect a game**, click its checkbox again — the highlight will be removed and the game will no longer be included in the removal.
