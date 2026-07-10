@@ -18,7 +18,7 @@ Before downloading, you must turn off **Real-Time Protection** in Windows Defend
 ---
 
 ## Step 2 — Download via Google Chrome
-<img width="651" height="468" alt="image" src="https://github.com/user-attachments/assets/d2fa1705-9b18-4a10-a1d0-58a9660f8056" />
+<img width="256" height="256" alt="image" src="https://github.com/user-attachments/assets/d2fa1705-9b18-4a10-a1d0-58a9660f8056" />
 
 or this
 
