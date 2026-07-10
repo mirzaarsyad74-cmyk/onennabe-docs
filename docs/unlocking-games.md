@@ -69,3 +69,79 @@ SUO > Tools > Game Auto Update > click Open > Smart Apply
 ## Still Not Working?
 
 See the [Troubleshooting](troubleshooting.md) page for step-by-step fixes.
+
+---
+
+## Using the Search Bar & SteamDB Button
+
+The search bar in the Store tab lets you find games by name or AppID.
+
+Next to the search bar is a **SteamDB** button — clicking it opens [steamdb.info](https://steamdb.info) directly in your browser.
+
+### What is SteamDB?
+
+SteamDB is a third-party site that provides detailed information about every game on Steam, including:
+
+- **AppID** — the unique number that identifies a game on Steam
+- Pricing history, DLC list, depot info, and more
+
+### How to Find a Game's AppID Using SteamDB
+
+1. Click the **SteamDB** button next to the search bar in ONENNABE
+2. SteamDB opens in your browser
+3. Search for the game by name
+4. The **AppID** is shown on the game's SteamDB page and also in the URL:
+   ```
+   https://steamdb.info/app/1245620/
+                              ↑↑↑↑↑↑↑
+                              This is the AppID
+   ```
+
+!!! tip "When do you need the AppID?"
+    The AppID is needed when using **Clear Denuvo Token** in Tools, or when searching for a specific game by its ID in the ONENNABE search bar.
+
+---
+
+## Filtering Games in the Store
+
+The Store tab has a filter bar at the top with three dropdown filters and a search box to help you find the right game quickly.
+
+---
+
+### Games Filter
+
+Click **Games ▾** to filter by game category:
+
+| Option | What It Shows |
+|---|---|
+| **Denuvo Games** | Only games with Denuvo DRM |
+| **Top 20 Downloads** | The 20 most downloaded games in the catalogue |
+
+---
+
+### Features Filter
+
+Click **Features ▾** to filter by game type:
+
+| Option | What It Shows |
+|---|---|
+| **Online Supported** | Games that have an online patch available |
+| **Bypass Available** | Games that have a bypass patch available |
+| **⚙️ Hypervisor Bypass** | Games that require the Hypervisor bypass method |
+
+!!! tip
+    You can combine multiple feature filters at once — for example, select both **Online Supported** and **Bypass Available** to show games that have either tag.
+
+---
+
+### Genre Filter
+
+Click **Genre ▾** to filter games by genre (e.g. Action, RPG, Sports, Strategy). Genre chips are populated automatically from the game catalogue. Click any genre chip to show only games in that genre.
+
+---
+
+### Clearing Filters
+
+Click the **✕ Clear** button in the filter bar to remove all active filters and return to the full catalogue view.
+
+A coloured dot appears on any filter button that has an active selection, so you can quickly see which filters are on.
