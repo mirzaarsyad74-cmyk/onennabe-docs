@@ -35,7 +35,11 @@ _Note: Click "Allow" or "Open Windows Security" if your browser prompts you._
 
 ```
 C:\Program Files\Steam
+```
+```
 C:\Program Files (x86)\Steam
+```
+```
 C:\Program Files\Steam Unlock ONENNABE
 ```
 
