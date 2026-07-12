@@ -17,7 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          # Fetches the full history so we can push changes back safely
           fetch-depth: 0 
 
       - name: Set up Python
@@ -39,10 +38,12 @@ jobs:
           target_file = "docs/steam.md"
 
           try:
-              with urllib.request.urlopen(url) as response:
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req) as response:
                   content = response.read().decode("utf-8")
               
-              match = re.search(r"(\| Channel \|.*?\n\n)", content, re.DOTALL)
+              # Cleaner pattern extraction matching the table structure
+              match = re.search(r"(\| Channel \|.*)", content, re.DOTALL)
               if match:
                   table_content = match.group(1).strip()
                   
@@ -57,19 +58,20 @@ jobs:
               print(f"Error updating table: {e}")
           '
 
-      # NEW STEP: Commit the changes back to your main branch
       - name: Commit and Push updated steam.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if steam.md actually changed to avoid empty commit errors
           if git diff --quiet docs/steam.md; then
             echo "No changes detected in Steam versions table."
           else
             git add docs/steam.md
             git commit -m "chore: auto-update steam client versions [skip ci]"
-            git push origin main
+            # Explicitly use the token setup to push back safely
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git main
           fi
 
       - name: Deploy to GitHub Pages
