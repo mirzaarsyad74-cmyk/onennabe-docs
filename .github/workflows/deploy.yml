@@ -42,7 +42,6 @@ jobs:
               with urllib.request.urlopen(req) as response:
                   content = response.read().decode("utf-8")
               
-              # Cleaner pattern extraction matching the table structure
               match = re.search(r"(\| Channel \|.*)", content, re.DOTALL)
               if match:
                   table_content = match.group(1).strip()
@@ -59,8 +58,6 @@ jobs:
           '
 
       - name: Commit and Push updated steam.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -70,8 +67,7 @@ jobs:
           else
             git add docs/steam.md
             git commit -m "chore: auto-update steam client versions [skip ci]"
-            # Explicitly use the token setup to push back safely
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git main
+            git push origin main
           fi
 
       - name: Deploy to GitHub Pages
