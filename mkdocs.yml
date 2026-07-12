@@ -43,6 +43,7 @@ nav:
     - Hypervisor Games: hypervisor.md
   - Help, my game is not unlocking!!:
     - Troubleshooting: troubleshooting.md
+    - Steam Update: steam.md
 
 markdown_extensions:
   - admonition
