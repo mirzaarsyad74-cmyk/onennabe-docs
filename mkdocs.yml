@@ -3,9 +3,10 @@ site_description: Official guide and documentation for Steam Unlock ONENNABE
 site_url: https://barryhamsy.github.io/onennabe-docs/
 
 theme:
+  name: material
+  custom_dir: theme   # <--- Added this line right here
   favicon: steamunlock_wannabe.ico
   logo: steamunlock_wannabe.ico
-  name: material
   palette:
     scheme: slate
     primary: custom
