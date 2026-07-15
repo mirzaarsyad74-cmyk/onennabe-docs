@@ -15,10 +15,10 @@ See [CD Key Activation](cd-key-activation.md) for full details.
 
 ### 🗑️ Reset Activation
 
-Removes the currently bound CD Key and Steam account binding from this installation. Use this only if you need to re-activate on a different Steam account.
+Removes the currently bound CD Key and Steam account binding from this installation. Use this only if you need to re-activate on a different Steam account and already obtain new CDKEY from your seller.
 
 !!! danger
-    Resetting activation will unbind your CD Key from this machine. Contact your seller before doing this.
+    Resetting activation will NOT unbind your CD Key from SteamID. Contact your seller before doing this.
 
 ---
 

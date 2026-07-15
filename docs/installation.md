@@ -96,11 +96,13 @@ See [CD Key Activation](cd-key-activation.md) to complete setup.
 **Installer gets deleted after download**  
 Your antivirus removed it. Complete Step 1B first, then re-download.
 
-**"Windows protected your PC" blue popup**  
-Click "More info" → "Run anyway". This is a SmartScreen false positive.
+**"Windows protected your PC" blue popup** 
+<img width="3000" height="1384" alt="7a87c930-7cda-11f1-9f08-a51988add829-by-Lens" src="https://github.com/user-attachments/assets/4a68df6c-d5c2-4af2-9ac0-fa39c9061fc9" />
+<br>Click "More info" → "Run anyway". This is a SmartScreen false positive.
 
 **App won't open after install**  
-Right-click the shortcut → Run as Administrator. Also make sure Steam is running.
+<img width="261" height="153" alt="Screenshot 2026-07-11 121221" src="https://github.com/user-attachments/assets/2f07c0b6-11f5-4db0-af51-82fb16535a1f" />
+<br>Right-click the shortcut → Run as Administrator. Also make sure Steam is running.
 
 **Black screen / WebView2 error on launch**  
 Install [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) — this powers the app interface.
