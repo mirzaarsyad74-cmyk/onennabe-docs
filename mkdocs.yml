@@ -21,10 +21,6 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-
-extra_javascript:
-  - javascripts/translate.js
-
 extra_css:
   - stylesheets/steam-theme.css
   - stylesheets/translate.css
