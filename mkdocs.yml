@@ -24,6 +24,9 @@ theme:
 extra_css:
   - stylesheets/steam-theme.css
   - stylesheets/translate.css
+  
+extra_javascript:
+  - javascripts/stars.js
 
 nav:
   - Home: index.md
