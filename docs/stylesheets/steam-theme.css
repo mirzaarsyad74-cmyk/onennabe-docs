@@ -64,25 +64,6 @@ body[data-md-color-scheme="slate"] {
   backdrop-filter: blur(8px);
   /* Smooth transitions for all hover interactions */
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  
-  /* FORCE TEXT VISIBILITY (Fixes disappearing text bug) */
-  color: var(--md-default-fg-color) !important;
-}
-
-/* Ensure all nested paragraphs, headers, and list items inherit the correct color immediately */
-.md-content__inner p,
-.md-content__inner h1,
-.md-content__inner h2,
-.md-content__inner h3,
-.md-content__inner h4,
-.md-content__inner li {
-  color: var(--md-default-fg-color) !important;
-}
-
-/* Keep muted text colored correctly as well */
-.md-content__inner .muted,
-.md-content__inner figcaption {
-  color: var(--md-default-fg-color--light) !important;
 }
 
 /* Game Card Hover Effect - Lifts up and Glows Steam Blue */
