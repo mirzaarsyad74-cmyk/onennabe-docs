@@ -1,4 +1,4 @@
-:root > * {
+:root {
   /* --- STEAM PALETTE CONFIGURATION --- */
   --md-default-bg-color:          #1b2838; /* Main body background (Steam Navy) */
   --md-default-bg-color--light:   #121a24; /* Card backgrounds */
@@ -20,24 +20,24 @@
   --md-code-fg-color:             #e1e5eb;
 }
 
+/* --- GLOBAL STEAM ATMOSPHERE --- */
+
+/* Deep radial gradient background matching the Steam Store */
+body[data-md-color-scheme="slate"] {
+  background: radial-gradient(circle at 50% 0%, #1b2838 0%, #0e141b 100%) !important;
+  background-attachment: fixed !important;
+}
+
 /* Make navigation header feel integrated like the Steam client top bar */
 .md-header {
   background-color: var(--md-primary-fg-color);
   border-bottom: 1px solid #232c3d;
 }
 
-/* Active navigation tab underline matching the STORE tab in the screenshot */
+/* Active navigation tab underline matching the STORE tab */
 .md-tabs__item--active {
   color: #fff !important;
   border-bottom: 3px solid #1a9fff !important;
-}
-
-/* Custom styled content cards to mimic the game listings */
-.md-content__inner {
-  background-color: rgba(23, 26, 33, 0.4);
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Custom Steam-like scrollbar */
@@ -53,8 +53,27 @@
   background: #4b5465;
 }
 
-/* --- CUSTOM BADGES (Gaming UI Elements) --- */
-/* You can apply these classes to span elements in your markdown */
+/* --- STEAM LIBRARY CARDS --- */
+
+/* Glassmorphism merged with standard padding */
+.md-content__inner {
+  background: linear-gradient(145deg, rgba(31, 38, 48, 0.7) 0%, rgba(20, 25, 31, 0.9) 100%);
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  /* Smooth transitions for all hover interactions */
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Game Card Hover Effect - Lifts up and Glows Steam Blue */
+.md-content__inner:hover {
+  transform: translateY(-2px);
+  border-color: rgba(26, 159, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(26, 159, 255, 0.1);
+}
+
+/* --- CUSTOM BADGES & BUTTONS --- */
 
 .badge-library {
   background-color: rgba(92, 177, 72, 0.2);
@@ -79,6 +98,18 @@
   text-transform: uppercase;
 }
 
+/* Shared smooth transition for buttons */
+.steam-btn-green, 
+.steam-btn-blue {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Click animation for buttons */
+.steam-btn-green:active, 
+.steam-btn-blue:active {
+  transform: scale(0.98);
+}
+
 .steam-btn-green {
   background-color: #5cb148;
   color: white !important;
@@ -91,6 +122,7 @@
 .steam-btn-green:hover {
   background-color: #69c652;
 }
+
 .steam-btn-blue {
   background-color: #2ea8e6 !important;
   color: #171a21 !important; /* Dark text for high contrast on the bright blue button */
@@ -103,37 +135,4 @@
 }
 .steam-btn-blue:hover {
   background-color: #46b7ed !important;
-}
-/* --- STEAM ATMOSPHERE UPGRADES --- */
-
-/* Deep radial gradient background matching the Steam Store */
-body[data-md-color-scheme="slate"] {
-  background: radial-gradient(circle at 50% 0%, #1b2838 0%, #0e141b 100%) !important;
-  background-attachment: fixed !important;
-}
-
-/* Glassmorphism Steam Library Cards */
-.md-content__inner {
-  background: linear-gradient(145deg, rgba(31, 38, 48, 0.7) 0%, rgba(20, 25, 31, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Game Card Hover Effect - Glows Steam Blue */
-.md-content__inner:hover {
-  border-color: rgba(26, 159, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(26, 159, 255, 0.1);
-}
-
-/* Subtle Screen Scanlines Overlay for a "PC Gaming" feel */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
-  background-size: 100% 4px;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.4;
 }
