@@ -145,6 +145,27 @@
         border-bottom: 1px solid #444d56;
     }
 
+    /* Google Translate Integration Styling inside the Modal */
+    #translate-section {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed #444d56;
+    }
+    .goog-te-gadget-simple {
+        border: 1px solid #444d56 !important;
+        border-radius: 4px !important;
+        padding: 6px !important;
+        background-color: #24292e !important;
+        color: #fff !important;
+        font-family: inherit !important;
+    }
+    .goog-te-gadget-simple span {
+        color: #fff !important;
+    }
+    /* Hide the default messy Google frame banner if it overrides */
+    .skiptranslate iframe { visibility: hidden !important; display: none !important; }
+    body { top: 0px !important; }
+
     @keyframes fadeIn {
         from { opacity: 0; transform: scale(0.95); }
         to { opacity: 1; transform: scale(1); }
@@ -1447,8 +1468,8 @@
       
 
   <!-- Floating Action Button -->
-  <button id="steam-fab" onclick="toggleSteamPopup(true)" title="View Steam Versions">
-    🎮 Steam Status
+  <button id="steam-fab" onclick="toggleSteamPopup(true)" title="View Steam Versions & Settings">
+    🎮 Steam Version & Options
   </button>
 
   <!-- Mini Popup Modal Overlay -->
@@ -1459,11 +1480,64 @@
         <button class="close-btn" onclick="toggleSteamPopup(false)">&times;</button>
       </div>
       <hr style="margin: 10px 0; border: 0; border-top: 1px solid #444d56;">
+      
+      <!-- Google Translate integration point -->
+      <div id="translate-section">
+        <div id="google_translate_element"></div>
+      </div>
+
       <div id="steam-table-container">Loading latest version status...</div>
     </div>
   </div>
 
   <script>
+  // ── 1. Google Translate Setup & Persistence Logic ───────────────────────
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({
+      pageLanguage: "en",
+      includedLanguages: "ms,zh-CN,th,id,ar,fr,de,ja,ko,pt,es,tr,vi",
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false,
+    }, "google_translate_element");
+  };
+
+  if (!document.getElementById("gt-script")) {
+    var s = document.createElement("script");
+    s.id = "gt-script";
+    s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.head.appendChild(s);
+  }
+
+  function getSavedLang() { return localStorage.getItem("suo_lang") || ""; }
+  function saveLang(lang) { localStorage.setItem("suo_lang", lang); }
+
+  function applyLang(lang) {
+    if (!lang) return;
+    var tries = 0;
+    var iv = setInterval(function () {
+      var sel = document.querySelector(".goog-te-combo");
+      if (sel) {
+        sel.value = lang;
+        sel.dispatchEvent(new Event("change"));
+        clearInterval(iv);
+      }
+      if (++tries > 40) clearInterval(iv);
+    }, 250);
+  }
+
+  // Monitor document changes to catch dynamic Google components and bind save triggers
+  var observer = new MutationObserver(function () {
+    var sel = document.querySelector(".goog-te-combo");
+    if (sel && !sel._suoBound) {
+      sel._suoBound = true;
+      sel.addEventListener("change", function () {
+        saveLang(sel.value);
+      });
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // ── 2. Modal Controls & Steam Version Fetching ──────────────────────────
   function toggleSteamPopup(show) {
       const overlay = document.getElementById('steam-popup-overlay');
       overlay.style.display = show ? 'flex' : 'none';
@@ -1515,6 +1589,33 @@
           console.error(error);
       }
   }
+
+  // ── 3. MkDocs Material Architecture Safe Execution ──────────────────────
+  function init() {
+      applyLang(getSavedLang());
+  }
+
+  function hookNavigation() {
+      if (typeof document$ !== "undefined") {
+          document$.subscribe(function () {
+              init();
+          });
+      } else {
+          var tries = 0;
+          var iv = setInterval(function () {
+              if (typeof document$ !== "undefined") {
+                  clearInterval(iv);
+                  hookNavigation();
+              }
+              if (++tries > 20) {
+                  clearInterval(iv);
+                  init();
+              }
+          }, 300);
+      }
+  }
+
+  document.addEventListener("DOMContentLoaded", hookNavigation);
   </script>
 
     </div>
@@ -1530,8 +1631,6 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../javascripts/translate.js"></script>
       
     
   </body>
