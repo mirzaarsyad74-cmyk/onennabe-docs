@@ -1,188 +1,139 @@
-/* STREAMING_CHUNK:Configuring custom Steam-inspired color variables... /
-:root {
-/ --- STEAM PALETTE CONFIGURATION --- /
---md-default-bg-color:          #1b2838; / Main body background (Steam Navy) /
---md-default-bg-color--light:   #121a24; / Card backgrounds */
+:root > * {
+  /* --- STEAM PALETTE CONFIGURATION --- */
+  --md-default-bg-color:          #1b2838; /* Main body background (Steam Navy) */
+  --md-default-bg-color--light:   #121a24; /* Card backgrounds */
+  
+  --md-primary-fg-color:          #171a21; /* Top header & sidebar base */
+  --md-primary-fg-color--light:   #1e232d; /* Hovered states / secondary headers */
+  --md-primary-fg-color--dark:    #0e1014; /* Deep footer / black elements */
 
---md-primary-fg-color:          #171a21; /* Top header & sidebar base /
---md-primary-fg-color--light:   #1e232d; / Hovered states / secondary headers /
---md-primary-fg-color--dark:    #0e1014; / Deep footer / black elements */
+  --md-accent-fg-color:           #2ea8e6; /* Active tabs, primary buttons (Bright Blue) */
+  --md-accent-fg-color--transparent: rgba(46, 168, 230, 0.1);
 
---md-accent-fg-color:           #2ea8e6; /* Active tabs, primary buttons (Bright Blue) */
---md-accent-fg-color--transparent: rgba(46, 168, 230, 0.1);
-
-/* --- FORCE WHITE TEXT INTERFACE --- /
---md-default-fg-color:          #ffffff; / Override main text to absolute white /
---md-default-fg-color--light:   #b0bec5; / Muted text / labels /
---md-typeset-a-color:           #66c0f4; / Hyperlink color */
-
-/* --- CODE BLOCKS --- /
---md-code-bg-color:             #0d121a; / Pitch black-blue for code blocks */
---md-code-fg-color:             #e1e5eb;
-}
-
-/* STREAMING_CHUNK:Styling main body background and header layouts... /
-/ --- GLOBAL STEAM ATMOSPHERE --- */
-
-/* Deep radial gradient background matching the Steam Store */
-body[data-md-color-scheme="slate"] {
-background: radial-gradient(circle at 50% 0%, #1b2838 0%, #0e141b 100%) !important;
-background-attachment: fixed !important;
+  /* --- TEXT & INTERFACE --- */
+  --md-default-fg-color:          #c6d4df; /* Main text (Steam light grey) */
+  --md-default-fg-color--light:   #8f98a0; /* Muted text / labels */
+  --md-typeset-a-color:           #66c0f4; /* Hyperlink color */
+  
+  /* --- CODE BLOCKS --- */
+  --md-code-bg-color:             #0d121a; /* Pitch black-blue for code blocks */
+  --md-code-fg-color:             #e1e5eb;
 }
 
 /* Make navigation header feel integrated like the Steam client top bar */
 .md-header {
-background-color: var(--md-primary-fg-color);
-border-bottom: 1px solid #232c3d;
+  background-color: var(--md-primary-fg-color);
+  border-bottom: 1px solid #232c3d;
 }
 
-/* Active navigation tab underline matching the STORE tab */
+/* Active navigation tab underline matching the STORE tab in the screenshot */
 .md-tabs__item--active {
-color: #fff !important;
-border-bottom: 3px solid #1a9fff !important;
+  color: #fff !important;
+  border-bottom: 3px solid #1a9fff !important;
+}
+
+/* Custom styled content cards to mimic the game listings */
+.md-content__inner {
+  background-color: rgba(23, 26, 33, 0.4);
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Custom Steam-like scrollbar */
 ::-webkit-scrollbar {
-width: 10px;
-background: #171a21;
+  width: 10px;
+  background: #171a21;
 }
 ::-webkit-scrollbar-thumb {
-background: #3d4450;
-border-radius: 5px;
+  background: #3d4450;
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-background: #4b5465;
+  background: #4b5465;
 }
 
-/* STREAMING_CHUNK:Applying hover transitions and bright white defaults for content text... /
-/ --- MAIN CONTENT & TYPOGRAPHY COVERS --- */
-
-/* Force all standard textual items in the document content to be white by default */
-.md-typeset,
-.md-typeset p,
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset li,
-.md-typeset span {
-color: #ffffff !important;
-}
-
-/* Glassmorphism merged with standard padding */
-.md-content__inner {
-background: linear-gradient(145deg, rgba(31, 38, 48, 0.7) 0%, rgba(20, 25, 31, 0.9) 100%);
-padding: 20px;
-border-radius: 4px;
-border: 1px solid rgba(255, 255, 255, 0.05);
-backdrop-filter: blur(8px);
-transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Game Card Hover Effect - Lifts up and Glows Steam Blue */
-.md-content__inner:hover {
-transform: translateY(-2px);
-border-color: rgba(26, 159, 255, 0.3);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(26, 159, 255, 0.1);
-}
-
-/* STREAMING_CHUNK:Fixing navigation items and hover blue glow effects... /
-/ --- NAVIGATION AND SIDEBAR OVERRIDES (FIX FOR SCREENSHOT ISSUES) --- */
-
-/*
-Ensures all sidebar/navigation links default to bright white.
-This directly overrides the issue with "Downloading ONENNABE" appearing black/invisible in the screenshot.
-*/
-.md-nav__link,
-.md-nav__link:link,
-.md-nav__link:visited,
-.md-nav__link:active,
-.md-nav__item .md-nav__link {
-color: #ffffff !important;
-opacity: 0.85;
-transition: color 0.2s ease, text-shadow 0.2s ease, opacity 0.2s ease;
-}
-
-/* Hover State - Glows vibrant Steam Blue */
-.md-nav__link:hover,
-.md-nav__item .md-nav__link:hover,
-.md-typeset a:hover {
-color: #66c0f4 !important;
-opacity: 1 !important;
-text-shadow: 0 0 8px #2ea8e6, 0 0 16px rgba(46, 168, 230, 0.7) !important;
-}
-
-/* Active Page Style - Highlighted in active Steam accent blue */
-.md-nav__item--active > .md-nav__link,
-.md-nav__link--active {
-color: #2ea8e6 !important;
-font-weight: bold !important;
-opacity: 1 !important;
-text-shadow: 0 0 10px rgba(46, 168, 230, 0.8) !important;
-}
-
-/* STREAMING_CHUNK:Defining game-inspired badging and custom buttons... /
-/ --- CUSTOM BADGES & BUTTONS --- */
+/* --- CUSTOM BADGES (Gaming UI Elements) --- */
+/* You can apply these classes to span elements in your markdown */
 
 .badge-library {
-background-color: rgba(92, 177, 72, 0.2);
-color: #a4d007;
-border: 1px solid #5cb130;
-padding: 2px 6px;
-border-radius: 3px;
-font-size: 0.75em;
-font-weight: bold;
-display: inline-block;
+  background-color: rgba(92, 177, 72, 0.2);
+  color: #a4d007;
+  border: 1px solid #5cb130;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .badge-hypervisor {
-background-color: rgba(168, 65, 209, 0.2);
-color: #d67fff;
-border: 1px solid #a841d1;
-padding: 2px 6px;
-border-radius: 3px;
-font-size: 0.75em;
-font-weight: bold;
-display: inline-block;
-text-transform: uppercase;
-}
-
-/* Shared smooth transition for buttons */
-.steam-btn-green,
-.steam-btn-blue {
-transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/* Click animation for buttons */
-.steam-btn-green:active,
-.steam-btn-blue:active {
-transform: scale(0.98);
+  background-color: rgba(168, 65, 209, 0.2);
+  color: #d67fff;
+  border: 1px solid #a841d1;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 .steam-btn-green {
-background-color: #5cb148;
-color: white !important;
-padding: 6px 16px;
-border-radius: 4px;
-font-weight: bold;
-text-decoration: none !important;
-display: inline-block;
+  background-color: #5cb148;
+  color: white !important;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none !important;
+  display: inline-block;
 }
 .steam-btn-green:hover {
-background-color: #69c652;
+  background-color: #69c652;
 }
-
 .steam-btn-blue {
-background-color: #2ea8e6 !important;
-color: #171a21 !important; /* Dark text for high contrast on the bright blue button */
-padding: 6px 16px;
-border-radius: 4px;
-font-weight: bold;
-text-decoration: none !important;
-display: inline-block;
-margin-bottom: 10px;
+  background-color: #2ea8e6 !important;
+  color: #171a21 !important; /* Dark text for high contrast on the bright blue button */
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 .steam-btn-blue:hover {
-background-color: #46b7ed !important;
+  background-color: #46b7ed !important;
+}
+/* --- STEAM ATMOSPHERE UPGRADES --- */
+
+/* Deep radial gradient background matching the Steam Store */
+body[data-md-color-scheme="slate"] {
+  background: radial-gradient(circle at 50% 0%, #1b2838 0%, #0e141b 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Glassmorphism Steam Library Cards */
+.md-content__inner {
+  background: linear-gradient(145deg, rgba(31, 38, 48, 0.7) 0%, rgba(20, 25, 31, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Game Card Hover Effect - Glows Steam Blue */
+.md-content__inner:hover {
+  border-color: rgba(26, 159, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(26, 159, 255, 0.1);
+}
+
+/* Subtle Screen Scanlines Overlay for a "PC Gaming" feel */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
 }
