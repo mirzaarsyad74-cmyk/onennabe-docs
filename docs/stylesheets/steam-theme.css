@@ -104,3 +104,36 @@
 .steam-btn-blue:hover {
   background-color: #46b7ed !important;
 }
+/* --- STEAM ATMOSPHERE UPGRADES --- */
+
+/* Deep radial gradient background matching the Steam Store */
+body[data-md-color-scheme="slate"] {
+  background: radial-gradient(circle at 50% 0%, #1b2838 0%, #0e141b 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Glassmorphism Steam Library Cards */
+.md-content__inner {
+  background: linear-gradient(145deg, rgba(31, 38, 48, 0.7) 0%, rgba(20, 25, 31, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Game Card Hover Effect - Glows Steam Blue */
+.md-content__inner:hover {
+  border-color: rgba(26, 159, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(26, 159, 255, 0.1);
+}
+
+/* Subtle Screen Scanlines Overlay for a "PC Gaming" feel */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
