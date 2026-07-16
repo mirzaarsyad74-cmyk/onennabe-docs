@@ -1663,6 +1663,20 @@
       }
   }
 
+  // Time conversion helper injection
+  function formatToLocalTime(dateString) {
+      const parsedDate = Date.parse(dateString);
+      if (!isNaN(parsedDate)) {
+          return new Date(parsedDate).toLocaleString('en-MY', {
+              timeZone: 'Asia/Kuala_Lumpur',
+              dateStyle: 'medium',
+              timeStyle: 'short',
+              hour12: true
+          });
+      }
+      return dateString;
+  }
+
   async function fetchLiveSteamVersions() {
       const container = document.getElementById('steam-table-container');
       try {
@@ -1686,13 +1700,22 @@
 
           if (tableLines.length > 0) {
               let html = '<table class="popup-table"><thead>';
+              let updatedColumnIndex = -1;
+
               tableLines.forEach((line, index) => {
                   const cells = line.split('|').map(c => c.trim()).filter(c => c !== '');
                   if (cells.length > 0 && !line.includes('---')) {
                       if (index === 0) {
+                          updatedColumnIndex = cells.findIndex(c => c.toLowerCase().includes('updated'));
                           html += '<tr>' + cells.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
                       } else {
-                          html += '<tr>' + cells.map(c => `<td>${c}</td>`).join('') + '</tr>';
+                          const processedCells = cells.map((cellValue, cellIndex) => {
+                              if (cellIndex === updatedColumnIndex) {
+                                  return formatToLocalTime(cellValue);
+                              }
+                              return cellValue;
+                          });
+                          html += '<tr>' + processedCells.map(c => `<td>${c}</td>`).join('') + '</tr>';
                       }
                   }
               });
