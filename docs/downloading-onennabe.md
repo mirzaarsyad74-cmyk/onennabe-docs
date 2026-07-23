@@ -8,9 +8,12 @@ Before downloading, you must turn off **Real-Time Protection** in Windows Defend
 
 ## Step 1 — Turn Off Real-Time Protection
 
-[🛡️ Open Real-Time Protection Settings](ms-settings:windowsdefender)
-
-*Note: Click "Allow" or "Open Settings" if your browser prompts you.*
+<div style="margin-bottom: 8px;">
+  <a href="ms-settings:windowsdefender" class="steam-btn-green">🛡️ Open Real-Time Protection Settings</a>
+</div>
+<p style="margin: 0; font-size: 0.9em; opacity: 0.85; font-style: italic;">
+  Note: Click "Allow" or "Open Settings" if your browser prompts you.
+</p>
 
 > **If the button above is blocked by your browser:**
 > Press **Win + R**, paste `ms-settings:windowsdefender`, and press **Enter**.
